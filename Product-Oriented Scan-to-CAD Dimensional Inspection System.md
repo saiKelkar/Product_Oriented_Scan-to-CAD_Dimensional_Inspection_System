@@ -56,3 +56,13 @@ So we are going to pretend to be the scanner. Open3D will randomly sample points
 Later, we'll make the synthetic scan increasingly horrible to challenge our algorithm - "Here's a messy cloud of points. Figure out where this object is and whether it matches the CAD."
 
 **Mesh vs point cloud isn't "which one is better?" It's "which representation is appropriate for the operation I'm performing?"**
+
+FPFH (Fast Point Feature Histogram) - "What does the local geometry around this point look like?"
+FPFH uses relationships between neighboring points and their normals to produce a numerical description of local geometry. 
+
+RANSAC - "Let's repeatedly try combinations of candidate matches and find a transformation supported by lots of them."
+ICP (Iterative Closest Point) - repeats
+1. Find corresponding nearby points
+2. Estimate transformation that reduces their distances
+3. Move scan
+4. Repeat
