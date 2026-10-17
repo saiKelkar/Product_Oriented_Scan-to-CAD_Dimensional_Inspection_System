@@ -76,3 +76,26 @@ Setting aspectmode to "data", forces Plotly to respect the true 1:1:1 physical s
 If we use triangles rather than indices (the i, j, k master list of vertices), it would render multiple duplicates. For example, a single corner vertex is usually shared by several different triangles. If we didn't use indices, we would have to duplicate those exact same X, Y, Z coordinates over and over again for every triangle that touches that corner. 
 By keeping a single, master list of unique vertices, and using i, j, and k as pointers, we save a massive amount of memory and ensure the mesh stays tightly glued together as a continuous, solid object rather than a pile of floating, disconnected triangles. 
 
+###### Converting to Point Cloud
+```
+pcd_perfect = mesh.sample_points_poisson_disk(number_of_points = 10000)
+```
+
+Open3D looks at the triangle mesh and randomly drops 10,000 points across its surface. 
+
+Poisson disk - This is a smart sampling method. Standard random sampling can accidentally clump points together in clusters and leave empty gaps. Poisson disk sampling ensures the points are evenly spaced out across the surface, just like a high-end 3D scanner capturing a uniform grid of data points. 
+
+```
+fig = go.Figure(
+	data = [
+		go.Scatter3d(
+			x = points[:, 0], y = points[:, 1], z = points[:, 2],
+			mode = "markers", 
+			marker = dict(size=2)
+		)
+	]	
+)
+
+go.Scatter3d with mode="markers" <-- tells plotly to not connect these points with triangles; just draw tiny little physical dots floating in space
+```
+
