@@ -1,0 +1,142 @@
+{
+  "project": "3D Scan-to-CAD Dimensional Inspection",
+  "part": "L-Bracket",
+  "timestamp_utc": "2026-10-12T02:56:04.318374+00:00",
+  "inspection_status": "FAIL",
+  "inspection_type": "synthetic_prototype",
+  "registration": {
+    "method": "FPFH_RANSAC_stable_region_ICP",
+    "transformation_scan_to_cad": [
+      [
+        0.9062312527500889,
+        0.422782350765548,
+        2.049788606321961e-05,
+        -32.92394142384129
+      ],
+      [
+        -0.4227804748874965,
+        0.9062270852404629,
+        0.0030232483322102407,
+        -23.38422887849833
+      ],
+      [
+        0.0012596002972995839,
+        -0.002748428229478508,
+        0.9999954297642389,
+        -15.081471373777926
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "benchmark_only": {
+      "rotation_error_deg": 0.17353407982419222,
+      "translation_error_mm": 0.14173919665852475
+    }
+  },
+  "feature_measurements": {
+    "hole_1": {
+      "nominal_diameter_mm": 4.983622255164757,
+      "measured_diameter_mm": 4.9891728299540725,
+      "diameter_error_mm": 0.005550574789315199,
+      "center_offset_2d_mm": 0.0677978290726402,
+      "fit_rmse_mm": 0.10182063693745082,
+      "points_used": 81,
+      "diameter_status": "PASS"
+    },
+    "hole_2": {
+      "nominal_diameter_mm": 4.984172103862514,
+      "measured_diameter_mm": 5.02702205066257,
+      "diameter_error_mm": 0.042849946800055605,
+      "center_offset_2d_mm": 0.027119109310141186,
+      "fit_rmse_mm": 0.11346446797420531,
+      "points_used": 86,
+      "diameter_status": "PASS"
+    },
+    "hole_spacing": {
+      "nominal_mm": 19.064331366557543,
+      "measured_mm": 19.100564695983966,
+      "error_mm": 0.03623332942642321
+    },
+    "horizontal_flange": {
+      "nominal_plane_deviation_p95_mm": 2.316219081001348,
+      "angular_deviation_deg": 3.638637302108289,
+      "best_fit_plane_rmse_mm": 0.46442555782488004,
+      "best_fit_residual_range_mm": 5.451182256948831
+    }
+  },
+  "tolerance_checks": [
+    {
+      "feature": "Hole 1 diameter",
+      "error": 0.005550574789315199,
+      "tolerance": 0.25,
+      "unit": "mm",
+      "status": "PASS"
+    },
+    {
+      "feature": "Hole 2 diameter",
+      "error": 0.042849946800055605,
+      "tolerance": 0.25,
+      "unit": "mm",
+      "status": "PASS"
+    },
+    {
+      "feature": "Hole 1 center offset",
+      "error": 0.0677978290726402,
+      "tolerance": 0.5,
+      "unit": "mm",
+      "status": "PASS"
+    },
+    {
+      "feature": "Hole 2 center offset",
+      "error": 0.027119109310141186,
+      "tolerance": 0.5,
+      "unit": "mm",
+      "status": "PASS"
+    },
+    {
+      "feature": "Hole center spacing",
+      "error": 0.03623332942642321,
+      "tolerance": 0.25,
+      "unit": "mm",
+      "status": "PASS"
+    },
+    {
+      "feature": "Flange nominal-plane deviation",
+      "error": 2.316219081001348,
+      "tolerance": 0.5,
+      "unit": "mm",
+      "status": "FAIL"
+    },
+    {
+      "feature": "Flange angular deviation",
+      "error": 3.638637302108289,
+      "tolerance": 1.0,
+      "unit": "degrees",
+      "status": "FAIL"
+    }
+  ],
+  "defect_clusters": [
+    {
+      "cluster_id": 0,
+      "num_points": 647,
+      "center_x_mm": 6.642700560791433,
+      "center_y_mm": 36.137380874526784,
+      "center_z_mm": 5.960577335408085,
+      "max_abs_deviation_mm": 2.6809073081854637,
+      "mean_abs_deviation_mm": 1.4610374692514034
+    }
+  ],
+  "limitations": [
+    "Synthetic scanner data",
+    "Demonstration tolerances",
+    "Illustrative uncertainty assumptions",
+    "Guided feature segmentation",
+    "Simplified datum-like registration",
+    "Flatness proxy is not minimum-zone GD&T flatness",
+    "Defect-cluster point count is not physical defect area"
+  ]
+}

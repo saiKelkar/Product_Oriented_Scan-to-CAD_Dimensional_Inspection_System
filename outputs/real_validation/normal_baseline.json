@@ -1,0 +1,13 @@
+{
+  "dataset": "Real3D-AD",
+  "sample": "137_good.ply",
+  "reference": "123_template.ply",
+  "num_points": 35584,
+  "median_distance": 0.06762547150410833,
+  "mean_distance": 0.07204745496473836,
+  "p95_distance": 0.13575233239828413,
+  "p99_distance": 0.1901377278867118,
+  "max_distance": 0.26218504227847567,
+  "icp_fitness": 1.0,
+  "icp_rmse": 0.08045109114899025
+}

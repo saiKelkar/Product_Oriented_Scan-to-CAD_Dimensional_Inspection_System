@@ -1,0 +1,3 @@
+method,trials,correct_accepted,incorrect_accepted,review_count,acceptance_rate_percent,mean_runtime_seconds
+multi_start,20,20,0,0,100.0,6.098974185949987
+single_start,20,17,0,3,85.0,2.0742328811000106

@@ -1,0 +1,66 @@
+{
+  "synthetic_defect": {
+    "type": "horizontal_flange_warp",
+    "maximum_vertex_displacement_mm": 3.0,
+    "direction": "positive_z"
+  },
+  "scan_pose": {
+    "cad_to_scan_transformation": [
+      [
+        0.9063077870366499,
+        -0.42261826174069944,
+        0.0,
+        20.0
+      ],
+      [
+        0.42261826174069944,
+        0.9063077870366499,
+        0.0,
+        35.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        15.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "scan_to_cad_transformation": [
+      [
+        0.9063077870366499,
+        0.42261826174069944,
+        0.0,
+        -32.91779490165748
+      ],
+      [
+        -0.42261826174069944,
+        0.90630778703665,
+        0.0,
+        -23.26840731146876
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -15.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "simulation": {
+    "gaussian_noise_std_mm": 0.1,
+    "dropout_probability": 0.1,
+    "outliers_requested": 150
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "project": "3D Scan-to-CAD Dimensional Inspection",
+  "timestamp_utc": "2026-10-15T04:08:28.180273+00:00",
+  "inspection": {
+    "overall_status": "FAIL",
+    "decision_basis": "provisional_demo_tolerances",
+    "checks": [
+      {
+        "feature": "hole_1 diameter",
+        "error": 0.0049321077298518645,
+        "tolerance": 0.25,
+        "unit": "mm",
+        "status": "PASS"
+      },
+      {
+        "feature": "hole_1 center offset",
+        "error": 0.10861765788902267,
+        "tolerance": 0.5,
+        "unit": "mm",
+        "status": "PASS"
+      },
+      {
+        "feature": "hole_2 diameter",
+        "error": 0.031760104025598146,
+        "tolerance": 0.25,
+        "unit": "mm",
+        "status": "PASS"
+      },
+      {
+        "feature": "hole_2 center offset",
+        "error": 0.07932952401854262,
+        "tolerance": 0.5,
+        "unit": "mm",
+        "status": "PASS"
+      },
+      {
+        "feature": "Hole center spacing",
+        "error": 0.0280030992730822,
+        "tolerance": 0.25,
+        "unit": "mm",
+        "status": "PASS"
+      },
+      {
+        "feature": "Flange nominal-plane deviation P95",
+        "error": 2.2498771977192225,
+        "tolerance": 0.5,
+        "unit": "mm",
+        "status": "FAIL"
+      },
+      {
+        "feature": "Flange angular deviation",
+        "error": 3.5194833478778844,
+        "tolerance": 1.0,
+        "unit": "degrees",
+        "status": "FAIL"
+      }
+    ],
+    "summary": {
+      "passed": 5,
+      "failed": 2,
+      "review": 0
+    }
+  },
+  "registration": {
+    "ransac_fitness": 0.824773413897281,
+    "ransac_rmse_mm": 0.7479606469992878,
+    "full_icp_fitness": 0.9868449901337426,
+    "full_icp_rmse_mm": 0.521747571697995,
+    "stable_icp_fitness": 0.99185667752443,
+    "stable_icp_rmse_mm": 0.33457119074751884,
+    "final_fitness": 0.9868449901337426,
+    "final_rmse_mm": 0.682997463462112,
+    "stable_source_points": 6754,
+    "stable_target_points": 7446,
+    "transformation": [
+      [
+        0.9061090288099891,
+        0.4230440268869923,
+        -0.0004233488667686713,
+        -32.92433420927275
+      ],
+      [
+        -0.4230367982326318,
+        0.9060985736818141,
+        0.005024152950610372,
+        -23.453002118832103
+      ],
+      [
+        0.002509033700270667,
+        -0.004373338201536043,
+        0.9999872892506552,
+        -15.030281420468553
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "multi_start": {
+      "status": "ACCEPTABLE",
+      "selected_attempt": 3,
+      "attempts": [
+        {
+          "attempt": 1,
+          "fitness": 0.9868449901337426,
+          "rmse_mm": 0.6866730711914907,
+          "basic_acceptable": true,
+          "feature_acceptable": true
+        },
+        {
+          "attempt": 2,
+          "fitness": 0.9867353650515238,
+          "rmse_mm": 0.6835247094390168,
+          "basic_acceptable": true,
+          "feature_acceptable": true
+        },
+        {
+          "attempt": 3,
+          "fitness": 0.9868449901337426,
+          "rmse_mm": 0.682997463462112,
+          "basic_acceptable": true,
+          "feature_acceptable": true
+        }
+      ]
+    },
+    "feature_validation": {
+      "status": "ACCEPTABLE",
+      "holes": {
+        "hole_1": {
+          "status": "ACCEPTABLE",
+          "points_observed": 81,
+          "fit_rmse_mm": 0.10184217921603742
+        },
+        "hole_2": {
+          "status": "ACCEPTABLE",
+          "points_observed": 88,
+          "fit_rmse_mm": 0.1067098613769629
+        }
+      }
+    }
+  },
+  "measurements": {
+    "holes": {
+      "hole_1": {
+        "nominal": {
+          "status": "MEASURED",
+          "center_y_mm": 15.479785369139346,
+          "center_x_mm": 6.473781177196428,
+          "diameter_mm": 4.984313313060522,
+          "fit_rmse_mm": 0.0036364101813193012,
+          "num_points": 252
+        },
+        "measured": {
+          "status": "MEASURED",
+          "center_y_mm": 15.375535089535616,
+          "center_x_mm": 6.443290608034133,
+          "diameter_mm": 4.989245420790374,
+          "fit_rmse_mm": 0.10184217921603742,
+          "num_points": 81
+        },
+        "diameter_error_mm": 0.0049321077298518645,
+        "center_offset_2d_mm": 0.10861765788902267
+      },
+      "hole_2": {
+        "nominal": {
+          "status": "MEASURED",
+          "center_y_mm": 34.54368783546929,
+          "center_x_mm": 6.4744455248229595,
+          "diameter_mm": 4.984180155081212,
+          "fit_rmse_mm": 0.003509267342461603,
+          "num_points": 261
+        },
+        "measured": {
+          "status": "MEASURED",
+          "center_y_mm": 34.46736766224231,
+          "center_x_mm": 6.496088180381185,
+          "diameter_mm": 5.01594025910681,
+          "fit_rmse_mm": 0.1067098613769629,
+          "num_points": 88
+        },
+        "diameter_error_mm": 0.031760104025598146,
+        "center_offset_2d_mm": 0.07932952401854262
+      }
+    },
+    "hole_spacing": {
+      "status": "MEASURED",
+      "nominal_mm": 19.063902477905692,
+      "measured_mm": 19.091905577178775,
+      "error_mm": 0.0280030992730822
+    },
+    "horizontal_flange": {
+      "status": "MEASURED",
+      "num_points": 1190,
+      "nominal_plane_deviation_p95_mm": 2.2498771977192225,
+      "nominal_plane_deviation_max_mm": 4.377509339745728,
+      "plane_fit_rmse_mm": 0.463724801859226,
+      "plane_residual_range_mm": 5.450639014376156,
+      "angular_deviation_deg": 3.5194833478778844,
+      "nominal_normal": [
+        1.0569174426047772e-05,
+        3.0006648600328784e-06,
+        0.9999999999396443
+      ],
+      "measured_normal": [
+        0.0023664824118233155,
+        -0.061339730904305736,
+        0.9981141403534878
+      ]
+    }
+  },
+  "deviation_summary": {
+    "total_points": 9122,
+    "within_tolerance_points": 7281,
+    "above_tolerance_points": 1740,
+    "unclassified_points": 101,
+    "median_unsigned_distance_mm": 0.1327846348285675,
+    "p95_unsigned_distance_mm": 1.8378560543060303
+  },
+  "defect_detection": {
+    "status": "COMPLETED",
+    "inspected_points": 1190,
+    "candidate_points": 644,
+    "unclustered_points": 6,
+    "num_clusters": 1,
+    "clusters": [
+      {
+        "cluster_id": 0,
+        "feature": "horizontal_flange",
+        "num_points": 638,
+        "center_xyz_mm": [
+          6.618648991494999,
+          36.21221054288607,
+          5.920293301395658
+        ],
+        "maximum_absolute_deviation_mm": 2.609514205168817,
+        "mean_absolute_deviation_mm": 1.420903411521551,
+        "status": "CANDIDATE_DEFECT"
+      }
+    ]
+  }
+}

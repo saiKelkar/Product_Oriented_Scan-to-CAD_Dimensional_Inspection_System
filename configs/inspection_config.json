@@ -1,0 +1,42 @@
+{
+  "part_name": "L-Bracket",
+  "units": "mm",
+  "registration": {
+    "voxel_size_mm": 1.0,
+    "normal_radius_multiplier": 2.0,
+    "ransac_distance_multiplier": 1.5,
+    "icp_distance_mm": 3.0,
+    "stable_region_y_max_mm": 25.0,
+    "fpfh_radius_multiplier": 5.0,
+    "strategy": "multi_start",
+    "num_attempts": 3
+  },
+  "features": {
+    "hole_1": {
+      "approx_center_y_mm": 15.5,
+      "approx_center_x_mm": 6.5,
+      "nominal_diameter_mm": 5.0
+    },
+    "hole_2": {
+      "approx_center_y_mm": 34.5,
+      "approx_center_x_mm": 6.5,
+      "nominal_diameter_mm": 5.0
+    }
+  },
+  "tolerances": {
+    "hole_diameter_mm": 0.25,
+    "hole_position_mm": 0.5,
+    "hole_spacing_mm": 0.25,
+    "flange_plane_deviation_mm": 0.5,
+    "flange_angle_deg": 1.0
+  },
+  "quality": {
+    "minimum_hole_points": 50,
+    "maximum_hole_fit_rmse_mm": 0.2,
+    "minimum_registration_fitness": 0.8
+  },
+  "defect_clustering": {
+    "eps_mm": 2.0,
+    "min_points": 10
+  }
+}
