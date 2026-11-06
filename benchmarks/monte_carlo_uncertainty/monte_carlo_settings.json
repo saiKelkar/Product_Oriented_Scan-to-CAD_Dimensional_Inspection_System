@@ -1,0 +1,13 @@
+{
+  "settings": {
+    "num_trials": 100,
+    "seed": 2026,
+    "noise_sigma_mm": 0.1,
+    "rotation_sigma_deg": 0.05,
+    "translation_sigma_mm": 0.05,
+    "dropout_fraction": 0.1,
+    "coverage_factor": 2.0,
+    "min_valid_fraction": 0.9
+  },
+  "selected_attempt": 1
+}
